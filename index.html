@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Kurt Martin S. Igot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="max-w-3xl mx-auto my-10 p-8 bg-white shadow-lg rounded-lg">
+        <div class="text-center">
+            <img src="picture.png" alt="Kurt Martin S. Igot" class="w-32 h-32 mx-auto rounded-full shadow-md">
+            <h1 class="text-3xl font-bold mt-4">Kurt Martin S. Igot</h1>
+            <p class="text-gray-600">Software Developer</p>
+        </div>
+        
+        <div class="mt-6 border-t pt-4">
+            <h2 class="text-xl font-semibold">Personal Information</h2>
+            <ul class="mt-2 space-y-1">
+                <li><strong>Age:</strong> 21</li>
+                <li><strong>Email:</strong> kurtmartin@example.com</li>
+                <li><strong>Location:</strong> Philippines</li>
+                <li><strong>Phone:</strong> +63 9610310072</li>
+                <li><strong>LinkedIn:</strong></li>
+                <li><strong>GitHub:</strong><a href="https://github.com/kurttzyz">https://github.com/kurttzyz</a></li>
+            </ul>
+        </div>
+        
+        <div class="mt-6 border-t pt-4">
+            <h2 class="text-xl font-semibold">Tech Stack</h2>
+            <ul class="mt-2 grid grid-cols-2 gap-2">
+                <li class="bg-gray-200 px-3 py-1 rounded">Django</li>
+                <li class="bg-gray-200 px-3 py-1 rounded">Python</li>
+                <li class="bg-gray-200 px-3 py-1 rounded">Laravel</li>
+                <li class="bg-gray-200 px-3 py-1 rounded">Php</li>
+                <li class="bg-gray-200 px-3 py-1 rounded">MySQL & PostgreSQL</li>
+                <li class="bg-gray-200 px-3 py-1 rounded">JavaScript</li>
+            </ul>
+        </div>
+        
+        <div class="mt-6 border-t pt-4">
+            <h2 class="text-xl font-semibold">Experience</h2>
+            <div class="mt-4">
+                <div class="relative h-2 bg-gray-200 rounded-full">
+                    <div class="absolute left-0 top-0 h-2 bg-blue-500 rounded-full" style="width: 80%;"></div>
+                </div>
+                <p class="text-gray-600 mt-2">Web Developer - Freelance (2022 - Present)</p>
+                <p class="text-gray-500 text-sm">Developed web applications using Django and React.js, integrated AI-based features, and handled full-stack development.</p>
+            </div>
+            <div class="mt-4">
+                <div class="relative h-2 bg-gray-200 rounded-full">
+                    <div class="absolute left-0 top-0 h-2 bg-blue-400 rounded-full" style="width: 70%;"></div>
+                </div>
+                <p class="text-gray-600 mt-2">Casino Platform Developer (2023 - Present)</p>
+                <p class="text-gray-500 text-sm">Built an online casino system using Django, integrated payment systems, and optimized gaming logic for performance.</p>
+            </div>
+            <div class="mt-4">
+                <div class="relative h-2 bg-gray-200 rounded-full">
+                    <div class="absolute left-0 top-0 h-2 bg-blue-300 rounded-full" style="width: 60%;"></div>
+                </div>
+                <p class="text-gray-600 mt-2">E-commerce Developer (2022 - Present)</p>
+                <p class="text-gray-500 text-sm">Developed a fully functional e-commerce platform with Laravel and MySQL, including inventory management and user authentication.</p>
+            </div>
+        </div>
+        
+        <div class="mt-6 border-t pt-4">
+            <h2 class="text-xl font-semibold">Education</h2>
+            <div class="mt-4">
+                <div class="relative h-2 bg-gray-200 rounded-full">
+                    <div class="absolute left-0 top-0 h-2 bg-green-500 rounded-full" style="width: 100%;"></div>
+                </div>
+                <p class="text-gray-600 mt-2">BS Computer Science - MSU Maigo (2023 - Present)</p>
+            </div>
+            <div class="mt-4">
+                <div class="relative h-2 bg-gray-200 rounded-full">
+                    <div class="absolute left-0 top-0 h-2 bg-green-400 rounded-full" style="width: 80%;"></div>
+                </div>
+                <p class="text-gray-600 mt-2">Senior High School - MSU Maigo (2021 - 2023)</p>
+            </div>
+            <div class="mt-4">
+                <div class="relative h-2 bg-gray-200 rounded-full">
+                    <div class="absolute left-0 top-0 h-2 bg-green-300 rounded-full" style="width: 60%;"></div>
+                </div>
+                <p class="text-gray-600 mt-2">Junior High School - MSU Maigo (2017 - 2021)</p>
+            </div>
+        </div>
+
+        <div class="mt-6 border-t pt-4">
+            <h2 class="text-xl font-semibold">Certifications</h2>
+            <ul class="mt-2 space-y-1">
+                <li>Certified Python Developer - Coursera (2023)</li>
+                <li>SQL Certificate- Sololearn</li>
+                <li>Full-Stack Web Development - Udemy (2022)</li>
+            </ul>
+        </div>
+        
+       
+        <div class="mt-6 border-t pt-4 text-center">
+            <a href="#" onclick="downloadResume()" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">Download Resume</a>
+        </div>
+    </div>
+
+    <script>
+        function downloadResume() {
+            const element = document.createElement('a');
+            const resumeContent = document.documentElement.outerHTML;
+            const blob = new Blob([resumeContent], { type: 'text/html' });
+            element.href = URL.createObjectURL(blob);
+            element.download = 'Kurt_Martin_Resume.html';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+    </script>
+    </div>
+</body>
+</html>
